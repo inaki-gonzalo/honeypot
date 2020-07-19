@@ -16,4 +16,4 @@ Create .env file with Splunk configs.
 
 # Running
 Execute:
-`docekr-compose up -d`
+`docker-compose up -d`
