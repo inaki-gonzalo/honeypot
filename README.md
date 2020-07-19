@@ -21,3 +21,7 @@ Execute:
 # Stop
 Execute:
 `docker-compose down -v --rmi local`
+
+# Splunk Dashboard
+This is a query on my splunk server showing probes.
+![dashboard](splunk_honeypot.png)
