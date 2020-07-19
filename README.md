@@ -14,6 +14,10 @@ Create .env file with Splunk configs.
 
 `SPLUNK_TOKEN=xxxx-xxx-xxxxx-xxxx # Update with your HTTP collector token.`
 
-# Running
+# Run
 Execute:
 `docker-compose up -d`
+
+# Stop
+Execute:
+`docker-compose down -v --rmi local`
