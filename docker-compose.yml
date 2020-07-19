@@ -1,0 +1,23 @@
+version: "3"
+services:
+  web:
+    image: httpd:2.4
+    networks:
+      - backend
+  forwarder:
+    build: .
+    ports:
+      - "80:80"
+    networks:
+      - backend
+      - frontend
+    logging:
+      driver: splunk
+      options:
+        splunk-url: http://${SPLUNK_URL}:8088
+        splunk-token: ${SPLUNK_TOKEN}
+        splunk-insecureskipverify: 'true'
+networks:
+  frontend:
+  backend:
+    internal: true
